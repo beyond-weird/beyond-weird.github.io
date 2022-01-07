@@ -1,0 +1,65 @@
+<html><head><META HTTP-EQUIV="KEYWORDS" CONTENT="Witchcraft, Paganism, paranormal, aliens, communion, ghosts, mystery, anomaly, sasquatch, ufo, extraterrestrials, area 51, conspire, conspiracy, dreamland, loch ness, bigfoot, creature, prophet, nessie, black projects, conspiracies, alchemy, yeti, nostradamus, cayce, mars face, mars, cydonia, search, pyramids, pyramid, affiliate, hauntings, witchcraft, paganism, pagan, barnes, noble"><META HTTP-EQUIV="DISTRIBUTION" CONTENT="global"><title>666 SEARCHER -- C LANGUAGE VERSION</title><link href="/styles.css" rel="stylesheet" type="text/css"></head><!--#include virtual="/inc/top.asp"--><body><center>	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >	<tr>	<td valign="top">	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >	<tr>			<td width="600" valign="bottom">		<ul id="tabnav"><li><a href="/" class="active"><b>Home</b></a></li></ul>		</td><td>								</td>	</tr>		<tr>		<td width="100%" valign="top" bgcolor="#000000" colspan="2"><img src="/images/space.gif" width="8" height="7"></td>		</tr>	</table>		<table width="100%"  border="1" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" >	<tr>		<td width="100%" valign="top" id="leftNavi">		<table width="100%" border="0" cellpadding="0" cellspacing="2"><tr></td></tr></table><br><div align="center"></div><pre><align="top">
+ 
+666 SEARCHER -- C LANGUAGE VERSION
+==================================
+[Thanks to a CN reader for the following]
+ 
+/*
+| srchr.c
+|
+| This is a C implementation of Brian Redman's QuickBasic 666 Searcher.
+| You can do whatever you want with it.  If one of the things you want
+| to do is compile it, then "cc -s -O srchr.c -o srchr" should work on
+| both unix and dos.  Enjoy!
+*/
+ 
+#include    <stdio.h>
+ 
+main(ac, av)
+int      ac;
+char   **av;
+{
+    int     c,
+            x;
+    char    *p,
+            *fgets(),
+            buf[BUFSIZ];
+ 
+    c = ~EOF;
+ 
+    do {
+        printf("Enter name: ");
+ 
+        if (fgets(buf, sizeof(buf), stdin) == (char *)NULL) break;
+ 
+        for (c = 0, p = buf; *p; p++) {
+            if (*p == '\n') {
+                *p = '\0'; break;
+            }
+ 
+            if ((x = *p) > 90) x -= 32;
+            x -= 64; x *= 6; c += x;
+        }
+ 
+        printf("%s = %d\n", buf, c);
+ 
+        do{ 
+            printf("Again? ");
+ 
+            if ((c = getchar()) != EOF)
+                switch (c) {
+                    case '\n': continue;
+                    case  'y':
+                    case  'Y': break;
+                      default: c = EOF;
+                }
+ 
+            while ((x = getchar()) != EOF && x != '\n');
+        } while (c != 'y' && c != 'Y' && c != EOF);
+    } while (c != EOF);
+ 
+    printf("Thank you for using 666 Searcher.\n");
+    exit(0);
+}
+ 
+ 		<br>		</td>		<td width="160" valign="top"><br>		<div align="center">		</div>		<center><table width="98%" border="0" cellpadding="0" cellspacing="2"><tr>	</td></tr></table>	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >		<tr>			</tr>	<tr>		<td width="100%" valign="top">		</td></tr></table>			</td></tr></table></center><br><br></body></html>

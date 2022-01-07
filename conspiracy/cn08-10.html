@@ -1,0 +1,57 @@
+<html><head><META HTTP-EQUIV="KEYWORDS" CONTENT="Witchcraft, Paganism, paranormal, aliens, communion, ghosts, mystery, anomaly, sasquatch, ufo, extraterrestrials, area 51, conspire, conspiracy, dreamland, loch ness, bigfoot, creature, prophet, nessie, black projects, conspiracies, alchemy, yeti, nostradamus, cayce, mars face, mars, cydonia, search, pyramids, pyramid, affiliate, hauntings, witchcraft, paganism, pagan, barnes, noble"><META HTTP-EQUIV="DISTRIBUTION" CONTENT="global"><title>666 SEARCHER</title><link href="/styles.css" rel="stylesheet" type="text/css"></head><!--#include virtual="/inc/top.asp"--><body><center>	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >	<tr>	<td valign="top">	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >	<tr>			<td width="600" valign="bottom">		<ul id="tabnav"><li><a href="/" class="active"><b>Home</b></a></li></ul>		</td><td>								</td>	</tr>		<tr>		<td width="100%" valign="top" bgcolor="#000000" colspan="2"><img src="/images/space.gif" width="8" height="7"></td>		</tr>	</table>		<table width="100%"  border="1" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" >	<tr>		<td width="100%" valign="top" id="leftNavi">		<table width="100%" border="0" cellpadding="0" cellspacing="2"><tr></td></tr></table><br><div align="center"></div><pre><align="top">
+ 
+666 SEARCHER
+============
+ 
+' 666 Searcher
+' Helps you keep on the lookout for the Beast, whose number is 666
+' Public Domain program written by Brian Francis Redman, Editor-
+' in-Chief, Conspiracy Nation, June 7, 1995
+'
+' Compile using QuickBasic 4.5 or may be portable to BASICA
+ 
+' Example names: try "Kissinger" and "Computer"
+ 
+CLS
+L1% = 0: X1% = 0: X2% = 0: X3% = 0
+LOCATE 2, 1
+PRINT "Enter name";
+Sw1% = 1
+WHILE Sw1% = 1
+    INPUT A$
+    L1% = LEN(A$)
+    FOR X1% = 1 TO L1%
+        X2% = ASC(MID$(A$, X1%, 1))
+        IF X2% > 90 THEN X2% = X2% - 32
+        X2% = X2% - 64
+        X2% = X2% * 6
+        X3% = X3% + X2%
+    NEXT X1%
+    LOCATE 4, 1
+    PRINT A$; " = "; X3%
+    B$ = ""
+    WHILE B$ = ""
+        B$ = INKEY$
+    WEND
+    LOCATE 6, 1
+    PRINT "Again?"
+    B$ = ""
+    WHILE B$ = ""
+        B$ = INKEY$
+    WEND
+    IF B$ <> "Y" AND B$ <> "y" THEN
+        Sw1% = 0
+    ELSE
+        L1% = 0: X1% = 0: X2% = 0: X3% = 0
+        A$ = "": B$ = ""
+        CLS
+        LOCATE 2, 1
+        PRINT "Enter name";
+    END IF
+WEND
+CLS
+LOCATE 2, 1
+PRINT "Thank you for using 666 Searcher."
+END
+ 
+ 		<br>		</td>		<td width="160" valign="top"><br>		<div align="center">		</div>		<center><table width="98%" border="0" cellpadding="0" cellspacing="2"><tr>	</td></tr></table>	<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" >		<tr>			</tr>	<tr>		<td width="100%" valign="top">		</td></tr></table>			</td></tr></table></center><br><br></body></html>

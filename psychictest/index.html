@@ -1,0 +1,198 @@
+<html>
+
+<head>
+<title>Psychic Test at beyondweird.com</title>
+<META HTTP-EQUIV="Description" CONTENT="Psychic Test. Test your psychic abilities. The items are picked after you click to give a true reading.">
+<META HTTP-EQUIV="keywords" CONTENT="Psychic Test, psychic abilities, psychic reading, psychic, abilities">
+<style type="text/css">
+<!-- 
+body { font-family:Verdana,Tahoma,Arial;  } 
+-->
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+/*BeyondWeird.com Psychic Test*/
+
+guess=0;
+correct = 0;
+incorrect = 0;
+function FormatNumber(num, decimalNum, bolLeadingZero, bolParens)
+/* IN - num:            the number to be formatted
+decimalNum:     the number of decimals after the digit
+bolLeadingZero: true / false to use leading zero
+bolParens:      true / false to use parenthesis for - num
+
+RETVAL - formatted number
+*/
+{
+	var tmpNum = num;
+	
+	// Return the right number of decimal places
+	tmpNum *= Math.pow(10,decimalNum);
+	tmpNum = Math.floor(tmpNum);
+	tmpNum /= Math.pow(10,decimalNum);
+	
+	var tmpStr = new String(tmpNum);
+	
+	// See if we need to hack off a leading zero or not
+	if (!bolLeadingZero && num < 1 && num > -1 && num !=0)
+		if (num > 0) {
+		tmpStr = tmpStr.substring(1,tmpStr.length);}
+		else {
+		// Take out the minus sign out (start at 2)
+		tmpStr = "-" + tmpStr.substring(2,tmpStr.length);
+	}
+	
+	// See if we need to put parenthesis around the number
+	if (bolParens && num < 0) {
+		tmpStr = "(" + tmpStr.substring(1,tmpStr.length) + ")";
+	}
+	
+	return tmpStr;
+}
+
+function generateRandomNumber(name) {
+	answer=Math.floor(Math.random()*5) +1
+		if(answer == name) {
+			correct++;
+		guess++;
+		shape = new Array('Circle','Cross','Square','Star','Wave')
+			now = "You are correct. The answer is " + shape[answer - 1];
+		
+		document.fname.report.value =guess;
+		document.fname.report2.value = now;
+		document.fname.report4.value = correct;
+		document.fname.report6.value =Math.floor(correct/guess * 100) +"%";
+		} else {
+		incorrect++;
+		guess++;
+		shape = new Array('Circle','Cross','Square','Star','Wave')
+			now = "Try again. The answer is "+ shape[answer - 1];
+		document.fname.report.value =guess;
+		document.fname.report2.value = now;
+		document.fname.report4.value = correct;
+		document.fname.report6.value =Math.floor(correct/guess * 100) +"%";
+		//document.fname.report.value =
+	}
+}
+function psychic() {
+	a = .16 * guess;
+	b = Math.sqrt(a);
+	c = guess * .2 ;
+	d = correct - c ;
+	e =(d/b) ;
+	f = Math.abs(e);
+	g = FormatNumber(f,2,true,false)
+		if( f <= 1.96) {
+			document.fname.tell.value = "Your score of " +g+ " does not indicate psychic ability.";
+		} if( f > 1.96 && f <= 2.58) {
+		document.fname.tell.value = "Your score of " +g+ " indicates slight psychic ability." ;
+	}
+	if( f > 2.58 && f <= 3.00) {
+		document.fname.tell.value = "Your score of " +g+ " indicates significant psychic ability" ;
+		if( f > 3.00) {
+			document.fname.tell.value = "Your score of " +g+ " indicates very significant psychic ability" ;
+		}
+	}
+}
+function openit(){
+	winda =
+		window.open("","newone","scrollbars,toolbar=no,location=no,directories=no,status=no,menubar=yes,resizable=yes,width=400,height=200");
+	winda.focus();
+	winda.document.open();
+	winda.document.write("This test is based on the Zenner card test.  Since the shape is not selected until after you have made your choice, this is a test of your ability to predict future events.  The accuracy of the result increases with the number of guesses that you make.  The significance level is determined by a formula that was used with the Zenner tests.  Less then 1.96 indicates no psychic ability.  1.96 to 2.58 indicates some psychic ability.  2.58 to 3.00 indicates significant psychic ability. Greater then 3.00 indicates very signficant psychic ability.");
+	
+	
+	winda.document.close();
+}
+
+</script>
+</head><!--#include virtual="/inc/top.asp"--><a href="/">Home</a>
+<body bgcolor="#FFFFFF">
+<center><b>Psychic Test. Test your psychic abilities.<br>This is a Test of your ability to Predict Future Events.<br><br>This can also help develop future sight. 
+<br>Concentrate and pick the one, start over at bottom.</center><br><br>
+<center>Don't worry, this score will not go on your permanent record or any online college transcript.
+<br><CENTER><br><br>
+<table width="50%">
+
+<TR>
+<TD COLSPAN="2">
+<p><strong><u>Click on an image..</strong></p>
+</TD>
+</TR>
+<TR>
+<form name="fname">
+<TD width="20%">
+<a href="javascript:generateRandomNumber(1)"><img src="circle.gif" alt="Circle" border=0 width="100" height="122" /></a>
+</TD>
+<TD width="20%">
+<a href="javascript:generateRandomNumber(2)"><img src="plus.gif" alt="Circle" border=0 width="100" height="122" /></a>
+</TD>
+<TD width="20%">
+<a href="javascript:generateRandomNumber(3)"><img src="square.gif" alt="Circle" border=0 width="100" height="122" /></a>
+</TD>
+<TD width="20%">
+<a href="javascript:generateRandomNumber(4)"><img src="star.gif" alt="Circle" border=0 width="100" height="122" /></a>
+</TD>
+<TD width="20%">
+<a href="javascript:generateRandomNumber(5)"><img src="waves.gif" alt="Circle" border=0 width="100" height="122" /></a>
+
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+<CENTER>    <p><input type="text" size="44" name="report2" value="To Start Pick a Image"></p></CENTER>
+
+
+
+<CENTER><p>Number Guesses: <input type="text" size="10" name="report"></p></CENTER>
+
+
+
+<CENTER> <p>Number Correct:&nbsp; <input type="text" size="10" name="report4"></p></CENTER>
+
+
+
+<CENTER> <p>Percent Correct:&nbsp;&nbsp;&nbsp;<input type="text" size="10" name="report6"></p></CENTER>
+
+<CENTER> <p><INPUT TYPE="button" NAME="pbutton"  VALUE="Psychic Score" onClick = psychic();>
+<input type="text" size="60" name="tell"></p>
+<p><INPUT TYPE="Reset" VALUE="Start Over" onClick = " javascript: correct = 0; guess = 0; "></p>
+</CENTER>
+<CENTER><input type=button onClick=openit(); value="Instructions">
+</CENTER>
+</form><br>
+
+<script type="text/javascript"><!--
+google_ad_client = "";
+google_alternate_color = "000000";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al";
+//2007-02-16: beyondweird
+google_ad_channel = "5387571983";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "000000";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<center><script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+<br><br><a href="/">Home</a></center>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5642362-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://https://') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></html>

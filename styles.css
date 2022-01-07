@@ -1,0 +1,216 @@
+/* CSS Document */
+
+body{
+	background-color: whitesmoke;
+
+}
+body, p, table, td, input {
+	font: Helvetica, sans-serif;
+	color: #000000; 
+
+}
+
+#tabnav
+	{
+	height: 20px;
+	margin: 0;
+	padding-left: 16px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+
+#tabnav li
+	{
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+  	}
+	
+#tabnav a:link, #tabnav a:visited
+	{
+	float: left;
+	background: #f3f3f3;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: bold;
+	padding: 2px 12px 2px 12px;
+	margin-right: 4px;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;		
+	text-decoration: none;
+	color: #000000;
+	}
+
+#tabnav a:link.active, #tabnav a:visited.active
+	{
+	border-bottom: 1px solid #fff;
+	background: #000000;
+	color: #ffffff;
+	}
+
+#tabnav a:hover
+	{
+	background: #ffffff;
+	color: #003399;
+	}
+
+
+.verticalMenuHome {
+	PADDING-LEFT: 5px; 
+	BACKGROUND: #6D9CE2; 
+	PADDING-BOTTOM: 3px; 
+	FONT: bold 8pt verdana, arial, helvetica, sans-serif; 
+	CURSOR: hand; 
+	PADDING-TOP: 3px; 
+	BORDER-BOTTOM: #cccccc 1px solid;
+}
+.verticalMenuHome A {
+	color: white; 
+	text-decoration:none;
+}
+.verticalMenuHome A:hover {
+	color: white;
+}
+
+.verticalMenu {
+	PADDING-LEFT: 5px; 
+	BACKGROUND: #fff; 
+	PADDING-BOTTOM: 3px; 
+	FONT: bold 10pt arial, helvetica, sans-serif; 
+	PADDING-TOP: 3px; 
+	BORDER-TOP: #cccccc 1px solid;
+}
+
+.verticalMenu A {
+	COLOR: #98CE2F;
+}
+.verticalMenu A:hover {
+	COLOR: #F5733A;
+}
+
+#leftNavi {
+	background-color:#ffffff;
+	border-right: 1px solid #333;
+}
+
+
+.articleListCatTD {
+	PADDING-LEFT: 5px; 
+	BACKGROUND: #fff; 
+	PADDING-BOTTOM: 3px; 
+	FONT: bold 10pt arial, helvetica, sans-serif; 
+	PADDING-TOP: 3px; 
+	BORDER-bottom: #cccccc 1px solid;
+}
+
+.articleListSummary {
+	PADDING-LEFT: 5px; 
+	BACKGROUND: #fff; 
+	PADDING-BOTTOM: 3px; 
+	FONT: 10pt arial, helvetica, sans-serif; 
+	PADDING-TOP: 3px; 
+	BORDER-bottom: #cccccc 1px solid;
+}
+.articleListDateAuthor {
+	PADDING-LEFT: 5px; 
+	BACKGROUND: #E9EAE7; 
+	PADDING-BOTTOM: 3px; 
+	FONT: 8pt arial, helvetica, sans-serif; 
+	PADDING-TOP: 3px; 
+	BORDER-bottom: #cccccc 1px solid;
+}
+
+.articleListReviews {
+	PADDING-right: 5px; 
+	BACKGROUND: #FDFEFC; 
+	PADDING-BOTTOM: 1px; 
+	FONT: 8pt arial, helvetica, sans-serif; 
+	PADDING-TOP: 1px; 
+	BORDER-bottom: #cccccc 1px solid;
+}
+
+#articleListReviews a:link, #articleListReviews a:visited {
+	COLOR: #0000ff;
+}
+
+#articleListReviews a:hover {
+	COLOR: #cc0000;
+}
+
+a.articleListCat:link, a.articleListCat:visited {
+	COLOR: #F5733A;
+}
+
+a.articleListCat:hover {
+	COLOR: #98CE2F;
+	background-color:#FFFFCC;
+}
+
+a.articleListHeadline:link, a.articleListHeadline:visited {
+	COLOR: #98CE2F;
+}
+a.articleListHeadline:hover {
+	COLOR: #F5733A;
+}
+
+
+/* navigation beetween page */
+.pages {
+    padding: 1em 1em 2em 1em;
+    margin: 1em 0;
+    font-size: 10px; 
+	font-weight:bold;
+}
+
+.pages a, .pages span {
+    display: block;
+    float: left;
+    padding: 0.2em 0.5em;
+    margin-right: 0.1em;
+    border: 1px solid #fff;
+    background: #fff;
+}
+
+.pages span.current {
+    border: 1px solid #333;
+    font-weight: bold;
+    background: #009900;
+    color: #fff;
+}
+
+.pages a {
+    border: 1px solid #009933;
+    text-decoration: none;
+}
+
+.pages a:hover {
+    border-color: #333;
+}
+
+.pages a.nextprev {
+    font-weight: bold;
+}
+
+.pages span.nextprev {
+    color: #666;
+}
+
+.pages span.nextprev {
+        border: 1px solid #ddd;
+        color: #999;
+}
+
+h1 { 
+	font: 14pt/1em arial, helvetica, sans-serif;
+	font-weight:bold;
+	color:#000000;
+}
+
+h2 { 
+	font: 12pt/1em arial, helvetica, sans-serif;
+	font-weight:bold;
+	color:#000000;
+
+}
+
+.TextObject { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: 14px; font-weight: normal; font-style: normal;}
